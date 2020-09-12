@@ -21,6 +21,6 @@ server.use(
 );
 
 server.use("/api/auth", authRouter);
-server.use("/api/jokes", jokesRouter);
+server.use("/api/jokes", authenticate, jokesRouter);
 
 module.exports = server;
