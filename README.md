@@ -26,11 +26,18 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
 
+- The difference between using sessions or JSON Web tokens for authentication is that when using JWT, the token is stored on the client side while the session makes use of the server memory which could be a drawback when a large number of users use the system at once. Also, JWT contains more user information and must be taken care of the proper way to prevent XSS security attacks.
+
 2. What does `bcrypt` do to help us store passwords in a secure manner.
+
+- Bcrypt is a password-hashing function that hashes passwords using algorithms so they are not stored as plain text in the database.
 
 3. How are unit tests different from integration and end-to-end testing.
 
+- Unit tests are tests that focus on small pieces of code (typically Classes or individual modules of an applications). We write integration tests to make sure different modules are working fine when combined together as a group. We write End to end tests to simulate a real user scenratio and validate the application is working correctly.
+
 4. How _Test Driven Development_ changes the way we write applications and tests.
+   Test driven development combines test-first development where we write a test before we write just enough production code to fulfull that test and refactoring.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -38,21 +45,21 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: git push origin `<firstName-lastName>`
+- [x] Create a forked copy of this project
+- [x] Add your team lead as collaborator on Github
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [x] Push commits: git push origin `<firstName-lastName>`
 
 ### Task 2: Project Requirements
 
 Your finished project must include all of the following requirements:
 
-- [ ] An authentication workflow with functionality for account creation and login implemented inside `/auth/auth-router.js`. A `user` has `username` and `password`. Both properties are required.
-- [ ] Middleware used to restrict access to resources for non authenticated requests. Use the file: `./auth/authenticate-middleware.js` as a starting point.
-- [ ] Configuration for running tests using `Jest`.
-- [ ] A **minimum o 2 tests** per API endpoint.
+- [x] An authentication workflow with functionality for account creation and login implemented inside `/auth/auth-router.js`. A `user` has `username` and `password`. Both properties are required.
+- [x] Middleware used to restrict access to resources for non authenticated requests. Use the file: `./auth/authenticate-middleware.js` as a starting point.
+- [x] Configuration for running tests using `Jest`.
+- [x] A **minimum o 2 tests** per API endpoint.
 
 **Note**: the database already has the users table, but if you run into issues, the migrations are available.
 
